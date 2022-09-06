@@ -1,3 +1,7 @@
+# Arquivo: .gitignore
+# Created by: Carlos - 05/09/2022
+### Framework: Laravel ###
+#--------------------------------
 /node_modules
 /public/build
 /public/hot
