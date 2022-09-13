@@ -18,7 +18,12 @@ ROTA PRINCIPAL
 Chamada no navador: 127.0.0.1:8000/
 */
 Route::get('/', function () {
-    return view('welcome');
+
+    $nome = "Carlos Henrique";
+    $idade = 58;
+    $profissao = "Agile-Master";
+
+    return view('welcome', [ 'nome' => $nome, 'idade' => $idade, 'profissao' => $profissao ]);
 });
 
 /*

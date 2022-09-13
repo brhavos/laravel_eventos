@@ -22,9 +22,22 @@
     </head>
     <body>
         <h1>Algum título</h1>
-            @if(10 > 5)
-                <p>A condição é true</p>
-            @endif
+            
+        @if(10 > 5)
+            <p>A condição é true</p>
+        @endif
+
+        <p>O nome é {{ $nome }}, sua idade é {{ $idade }} anos e a profissão é {{ $profissao }}.</p>
+
+        @if($nome == "Pedro" )
+            <p>O nome é Pedro</p>
+        @elseif($nome == "Maria" )
+            <p>O nome é Maria</p>
+        @else
+            <p>O nome não é Pedro</p>
+        @endif
+        
+
 
     </body>
 </html>
