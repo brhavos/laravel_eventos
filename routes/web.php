@@ -22,6 +22,7 @@ Route::get('/', function () {
     $nome = "Carlos Henrique";
     $idade = 58;
     $profissao = "Agile-Master";
+    $email = "brhavos@gmail.com";
 
     return view('welcome', [ 'nome' => $nome, 'idade' => $idade, 'profissao' => $profissao ]);
 });
