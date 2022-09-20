@@ -37,7 +37,30 @@
             <p>O nome não é Pedro</p>
         @endif
         
+        <!-- Uma estrutura "for" dentro do "htlm" atavez de diretivas -->
+        @for($i = 0; $i < count($vetArr); $i++)
+            <p>{{ $i }} -) {{ $vetArr[$i] }}
+            @if ($i == 2)
+                ---> Valor de "i" = 2...
+            @endif
+            </p>
+        @endfor
 
+        <!-- Executando códigos PHP -->
+        @php
+            $varNome = "João";
+            echo "Executando comandos PHP..." . $varNome;
+        @endphp
+
+        {{-- Comentário em Blade --}}
+
+         
+        @foreach($vetCidades as $cidade)
+            <p>índice = {{ $loop->index }}</p>
+            <p>cidade = {{ $cidade }}</p>
+            <p>----------</p>
+        @endforeach
+        
 
     </body>
 </html>

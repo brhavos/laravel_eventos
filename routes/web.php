@@ -19,12 +19,23 @@ Chamada no navador: 127.0.0.1:8000/
 */
 Route::get('/', function () {
 
+    // Variáveis locais:
     $nome = "Carlos Henrique";
     $idade = 58;
     $profissao = "Agile-Master";
     $email = "brhavos@gmail.com";
+    $arr = [10,20,30,40,50]; // um array.
+    $cidades = ["Campinas","Valinhos","Limeira","Araras","Rio Claro"];
 
-    return view('welcome', [ 'nome' => $nome, 'idade' => $idade, 'profissao' => $profissao ]);
+    // Passando dados para a View "welcome.blade.php"
+    return view('welcome', [
+        'nome' => $nome, 
+        'idade' => $idade, 
+        'profissao' => $profissao,
+        'vetArr' => $arr,
+        'email' => $email,
+        'vetCidades' => $cidades
+    ]);
 });
 
 /*
@@ -42,4 +53,3 @@ Chamada no navador: 127.0.0.1:8000/produto
 Route::get('/produto', function () {
     return view('produto');
 });
-
